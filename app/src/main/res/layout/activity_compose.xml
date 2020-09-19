@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgold"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+     >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="New Compostion"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"/>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9E8D88"
+            android:popupBackground="@color/colordarkgrey" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9E8D88"
+            android:popupBackground="@color/colordarkgrey"
+            android:theme="@style/TextAppearance.MaterialComponents.Headline4" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/qty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Quantity under 1000 grams"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="add"
+                android:text="Add" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="441dp"
+        android:background="@color/colordarkgrey"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rerecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colordarkgrey"
+            android:padding="5dp"
+            android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colordarkgrey">
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rtotaldata"
+                >
+                <TextView
+                    android:id="@+id/tq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorWhite"
+                    android:text="TotalQuantity"/>
+                <TextView
+                    android:id="@+id/tc"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:text="Total cost"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"/>
+                <TextView
+                    android:layout_below="@id/tq"
+                    android:id="@+id/totalquantity"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_below="@id/tc"
+                    android:id="@+id/totalcost"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"/>
+
+            </RelativeLayout>
+            <RadioGroup
+                android:layout_below="@+id/rtotaldata"
+                android:id="@+id/rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_below="@+id/rtotaldata"
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="composite"
+                    android:textColor="@color/colorWhite"/>
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miscellaneous"
+                    android:textColor="@color/colorWhite"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_weight="1"
+                android:onClick="saveit"
+                android:id="@+id/save"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print"
+                android:layout_weight="1"
+                android:id="@+id/print"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

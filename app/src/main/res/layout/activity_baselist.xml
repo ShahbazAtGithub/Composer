@@ -1,0 +1,49 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+ <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" android:orientation="horizontal">
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Base"
+             android:id="@+id/basic"
+             android:layout_weight="1"
+             android:onClick="baselist"/>
+         <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Composite"
+         android:id="@+id/com"
+             android:layout_weight="1"
+         android:onClick="comp"/>
+       <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Miscellaneous"
+           android:layout_weight="1"
+         android:id="@+id/misc"
+         android:onClick="misc"/>
+     </LinearLayout>
+
+     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/irecycle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:padding="5dp"
+    android:background="@color/colordarkgrey"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</LinearLayout>
+
+    </ScrollView>
